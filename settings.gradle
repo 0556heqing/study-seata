@@ -1,0 +1,5 @@
+rootProject.name = 'study-seata'
+include 'seata-server'
+include 'seata-client1'
+include 'seata-client2'
+
