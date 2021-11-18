@@ -5,11 +5,7 @@ plugins {
 }
 
 dependencies {
-
-//    compile ('com.alibaba.cloud:spring-cloud-alibaba-seata:2.1.0.RELEASE') {
-//        exclude group: 'io.seata', module: 'seata-all'
-//    }
-//    compile 'io.seata:seata-all:1.4.0'
+    
     compile group: 'com.alibaba.cloud', name: 'spring-cloud-starter-alibaba-seata', version: '2.2.3.RELEASE'
 
     compile 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:2.1.2.RELEASE'

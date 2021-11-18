@@ -28,7 +28,13 @@ public class TestUserServiceImpl extends ServiceImpl<TestUserMapper, TestUserPO>
     @Autowired
     RestTemplate restTemplate;
 
-    @GlobalTransactional(name="study-seata")
+    /**
+     * 测试分布式事务
+     * @param id
+     * 注意 ：在需要进行分布式事务时一定要加上 @GlobalTransactional，否则事务无效
+     * 参考资料：https://zhuanlan.zhihu.com/p/103120151
+     */
+    @GlobalTransactional
     @Override
     public void seata(int id) {
 

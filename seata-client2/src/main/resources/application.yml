@@ -6,16 +6,6 @@ cluster:
   nacos:
     node1: 127.0.0.1:8848
 
-seata:
-  enabled: true
-  service:
-    vgroup-mapping:
-      study-seata: default
-    grouplist:
-      default: 127.0.0.1:8091
-    disable-global-transaction: false
-    enable-degrade: false
-
 spring:
   application:
     name: ${server.name}
@@ -29,6 +19,7 @@ spring:
 
     alibaba:
       seata:
+        # 注意： tx-service-group 一定要server，client都要保持一致，否则能坑死你！
         tx-service-group: study_tx_group
 
   ### 单数据源配置
